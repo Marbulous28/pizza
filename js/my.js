@@ -26,32 +26,29 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputtedSize = $("#size").val();
-    newPizza = new Order(inputtedSize);
-
-
+    var orderedPizza = new Pizza(inputtedSize)
 
     $(".new-topping").each(function() {
       var inputtedToppings = $(this).find(".toppings").val();
-      console.log(inputtedToppings);
-      var toppingList = new Toppings(inputtedToppings)
-      newPizza.toppings.push(toppingList)
-      console.log(toppingList)
-
+      orderedPizza.AddToppings(inputtedToppings);
     });
 
-
+    $("ul#display-order").append("<li>" + orderedPizza.display() + "</li>")
   });
 
 
 });
 
 //Buisness Logic
-
-function Order(size) {
+function Pizza(size) {
   this.size = size;
   this.toppings = [];
 }
 
-function Toppings(topping) {
-  this.topping = topping;
+Pizza.prototype.AddToppings = function(toppingsToBeAdded) {
+  this.toppings.push(toppingsToBeAdded);
+}
+
+Pizza.prototype.display = function() {
+  return "A " + this.size + " pizza with : " + this.toppings;
 }
