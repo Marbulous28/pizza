@@ -8,47 +8,48 @@
     </head>
     <body>
       <div class="container">
+        <div class="col-md-6">
+          <h2>Create a Pizza</h2>
+          <form id="pizza-creation">
 
-        <h2>Create a Pizza</h2>
-        <form id="pizza-creation">
-
-          <div class="seperate">
-            <fieldset class="form-group">
-              <label for="size-select">Select your size</label>
-              <select id="size" class="form-control">
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">large</option>
-                <option value="xl">Extra large</option>
-              </select>
-            </fieldset>
-          </div>
-          <div class="new-toppings">
-            <div class="new-topping">
+            <div class="seperate">
               <fieldset class="form-group">
-                <label for="topping-select">Select a topping</label>
-                <select class="toppings form-control">
-                  <option value="mushroom">Mushrooms</option>
-                  <option value="onion">Onions</option>
-                  <option value="pepper">Peppers</option>
-                  <option value="pineapple">Pineapple</option>
-                  <option value="tomato">Tomatoes</option>
-                  <option value="olive">Olives</option>
-                  <option value="sausage">Sausage</option>
-                  <option value="pepperoni">Pepperoni</option>
+                <label for="size-select">Select your size</label>
+                <select id="size" class="form-control">
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">large</option>
+                  <option value="xl">Extra large</option>
                 </select>
-
               </fieldset>
             </div>
-          </div>
+            <div class="new-toppings">
+              <div class="new-topping">
+                <fieldset class="form-group">
+                  <label for="topping-select">Select a topping</label>
+                  <select class="toppings form-control">
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="onions">Onions</option>
+                    <option value="peppers">Peppers</option>
+                    <option value="pineapple">Pineapple</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="olives">Olives</option>
+                    <option value="sausage">Sausage</option>
+                    <option value="pepperoni">Pepperoni</option>
+                  </select>
 
-            <button type="button" id="add-toppings" class="btn btn-info">Add more toppings</button>
+                </fieldset>
+              </div>
+            </div>
 
-          <button type="submit" class="btn btn-success">finalize this pizza</button>
+              <button type="button" id="add-toppings" class="btn btn-info">Add More Toppings</button>
 
-        </form>
+            <button type="submit" class="btn btn-success">Submit Order</button>
 
-        <div id="display-order">
+          </form>
+        </div>
+        <h2>Your Order:</h2>
+        <div class="col-md-6 col-push-md-6" id="display-order">
 
         </div>
 

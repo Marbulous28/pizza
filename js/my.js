@@ -33,9 +33,9 @@ $(document).ready(function() {
       var inputtedToppings = $(this).find(".toppings").val();
       length = orderedPizza.AddToppings(inputtedToppings);
     });
-
-    $("div#display-order").append("<p>" + orderedPizza.Display() + "</p>")
-    $("div#display-order").append("<p>" + orderedPizza.ThatWillCost(length) + "</p>")
+    $("div#display-order").show();
+    $("div#display-order").append("<p>" + orderedPizza.Display() + "</p>");
+    $("div#display-order").append("<p>" + orderedPizza.ThatWillCost(length) + "</p>");
   });
 
 
@@ -54,17 +54,17 @@ Pizza.prototype.AddToppings = function(toppingsToBeAdded) {
 
 
 Pizza.prototype.Display = function() {
-  return "One " + this.size + " pizza with : " + this.toppings.join(", ");
+  return "A " + this.size + " pizza with : " + this.toppings.join(", ");
 }
 
 Pizza.prototype.ThatWillCost = function(numberToppings) {
   if (this.size == "small") {
-      return "That will be " + (numberToppings + 10) + "$ in total";
+      return "Your total comes to " + (numberToppings + 10) + "$";
   } else if (this.size == "medium") {
-      return "That will be " + (numberToppings + 12) + "$ in total";
+      return "Your total comes to" + (numberToppings + 12) + "$";
   } else if (this.size == "large") {
-      return "That will be " + (numberToppings + 14) + "$ in total";
+      return "Your total comes to" + (numberToppings + 14) + "$";
   } else if (this.size == "xl") {
-      return "That will be " + (numberToppings + 16) + "$ in total";
+      return "Your total comes to " + (numberToppings + 16) + "$";
   }
 }

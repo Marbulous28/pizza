@@ -1,3 +1,13 @@
 .seperate {
   margin-bottom: 50px;
 }
+
+#display-order{
+  font-family: sans-serif;
+  display: none;
+  font-size: 150%;
+}
+
+body {
+  background: url(../img/background.jpg);
+}
