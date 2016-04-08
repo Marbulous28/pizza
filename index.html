@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="css/my.css" rel="stylesheet" type="text/css">
+      <script src="js/jquery-1.12.3.js"></script>
+      <script src="js/my.js"></script>
+    </head>
+    <body>
+      <div class="container">
+
+        <h2>Create a Pizza</h2>
+        <form id="pizza-creation">
+
+          <div class="seperate">
+            <fieldset class="form-group">
+              <label for="size-select">Select your size</label>
+              <select id="size" class="form-control">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">large</option>
+                <option value="xl">Extra large</option>
+              </select>
+            </fieldset>
+          </div>
+          <div class="new-toppings">
+            <div class="new-topping">
+              <fieldset class="form-group">
+                <label for="topping-select">Select a topping</label>
+                <select class="toppings form-control">
+                  <option value="mushroom">Mushrooms</option>
+                  <option value="onion">Onions</option>
+                  <option value="pepper">Peppers</option>
+                  <option value="pineapple">Pineapple</option>
+                  <option value="tomato">Tomatoes</option>
+                  <option value="olive">Olives</option>
+                  <option value="sausage">Sausage</option>
+                  <option value="pepperoni">Pepperoni</option>
+                </select>
+
+              </fieldset>
+            </div>
+          </div>
+
+            <button type="button" id="add-toppings" class="btn btn-info">Add more toppings</button>
+
+          <button type="submit" class="btn btn-success">finalize this pizza</button>
+
+        </form>
+      </div>
+    </body>
+  </html>
